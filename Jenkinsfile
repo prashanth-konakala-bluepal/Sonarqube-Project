@@ -28,8 +28,8 @@ pipeline
                                                         withSonarQubeEnv("Sonarqube_Pipeline")
                                                         {
                                                          sh " mvn -f MyWebApp/pom.xml sonar:sonar \
-                                                              -Dsonar.projectName=Sonarqube_Pipeline \
-                                                              -Dsonar.projectKey=Sonarqube_Pipeline \
+                                                              -Dsonar.projectName=Sonarqube_Jenkinsfile_Pipeline \
+                                                              -Dsonar.projectKey=Sonarqube_Jenkinsfile_Pipeline \
                                                               -Dsonar.login=b86e54949ae3cb448a47fbd9aca44dfc24fc214d "
                                                         }
                                                     }
