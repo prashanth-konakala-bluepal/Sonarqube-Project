@@ -25,7 +25,7 @@ pipeline
                                             script 
                                                     {
                                                         def scannerHome = tool 'sonarqube';
-                                                        withSonarQubeEnv("Sonarqube_Pipeline")
+                                                        withSonarQubeEnv("Sonarqube_Pipeline_OhioRegion")
                                                         {
                                                          sh " mvn -f MyWebApp/pom.xml sonar:sonar \
                                                               -Dsonar.projectName=Sonarqube_Jenkinsfile_Pipeline_OhioRegion \
