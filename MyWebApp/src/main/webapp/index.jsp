@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Hello World! Welcome to House of Eric Akinnibosun</h2>
+<h1>Welcome to BluPal Soultions Pvt Ltd.</h1>
 </body>
 </html>
