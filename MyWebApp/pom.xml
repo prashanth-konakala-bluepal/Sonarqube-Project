@@ -26,6 +26,7 @@
 
   <build>
     <finalName>${project.artifactId}</finalName>
+  <profile>
   <id>coverage</id>
   <build>
    <plugins>
@@ -49,5 +50,7 @@
     </executions>
     </plugin>
    </plugins>
+  </build>
+</profile>
   </build>
 </project>
