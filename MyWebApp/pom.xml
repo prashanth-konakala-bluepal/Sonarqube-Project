@@ -26,7 +26,6 @@
 
   <build>
     <finalName>${project.artifactId}</finalName>
-    <profile>
   <id>coverage</id>
   <build>
    <plugins>
