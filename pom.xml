@@ -45,7 +45,7 @@
 				  </excludes>
 				</rule>
 			  </rules>
-			<configuration>
+			</configuration>
 		  </execution>
 		</executions>
 	  </plugin>
