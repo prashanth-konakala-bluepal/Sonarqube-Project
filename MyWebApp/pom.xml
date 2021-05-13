@@ -28,7 +28,8 @@
     <finalName>${project.artifactId}</finalName>
   </build>
 	
-<profile>
+<profiles>
+  <profile>
         <id>coverage</id>
         <activation>
             <activeByDefault>true</activeByDefault>
@@ -57,5 +58,6 @@
             </plugins>
         </build>
     </profile>
+  </profiles>
 	
 </project>
