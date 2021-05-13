@@ -24,8 +24,6 @@
 	<sonar.language>java</sonar.language>
   </properties>
 
-  <build>
-    <finalName>${project.artifactId}</finalName>
 	<profiles>
 	  <profile>
             <id>coverage</id>
@@ -54,6 +52,9 @@
             </build>
         </profile>
      </profiles>
+	
+  <build>
+    <finalName>${project.artifactId}</finalName>
   </build>
 		
 </project>
