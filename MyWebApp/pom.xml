@@ -28,11 +28,10 @@
     <finalName>${project.artifactId}</finalName>
   </build>
 	
-<profile>
-  <id>coverage</id>
   <build>
    <plugins>
     <plugin>
+    <id>coverage</id>
     <groupId>org.jacoco</groupId>
     <artifactId>jacoco-maven-plugin</artifactId>
     <version>0.8.5</version>
@@ -53,6 +52,5 @@
     </plugin>
    </plugins>
   </build>
-</profile>
 	
 </project>
