@@ -23,6 +23,10 @@
 	<sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
 	<sonar.language>java</sonar.language>
   </properties>
+	
+  <properties>
+    <sonar.coverage.jacoco.xmlReportPaths>${basedir}/${aggregate.report.dir}</sonar.coverage.jacoco.xmlReportPaths>
+  </properties>
   
   <build>
     <finalName>${project.artifactId}</finalName>
