@@ -26,28 +26,28 @@
 
   <build>
     <finalName>${project.artifactId}</finalName>
-	  <plugins>
-    <plugin>
-    <id>coverage</id>
-    <groupId>org.jacoco</groupId>
-    <artifactId>jacoco-maven-plugin</artifactId>
-    <version>0.8.5</version>
-    <executions>
-      <execution>
-        <id>prepare-agent</id>
-        <goals>
-         <goal>prepare-agent</goal>
-        </goals>
-      </execution>
-      <execution>
-        <id>report</id>
-        <goals>
-         <goal>report</goal>
-        </goals>
-      </execution>
-    </executions>
-    </plugin>
-   </plugins>
+	<plugins>
+        <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.5</version>
+            <executions>
+                <execution>
+                    <id>prepare-jacoco-agent</id>
+                    <goals>
+                        <goal>prepare-agent</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>report</id>
+                    <goals>
+                        <goal>report-aggregate</goal>
+                    </goals>
+                    <phase>test</phase>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
   </build>
 	
 </project>
