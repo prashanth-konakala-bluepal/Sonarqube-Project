@@ -17,7 +17,7 @@
   </dependencies>
   
   <properties>
-    <jacoco.version>0.8.5</jacoco.version>
+    <jacoco.version>0.8.3</jacoco.version>
 	<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
 	<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
 	<sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
@@ -26,38 +26,34 @@
 
   <build>
     <finalName>${project.artifactId}</finalName>
+	<profiles>
+	  <profile>
+            <id>coverage</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <version>0.8.3</version>
+                        <executions>
+                            <execution>
+                                <id>prepare-agent</id>
+                                <goals>
+                                    <goal>prepare-agent</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>report</id>
+                                <goals>
+                                    <goal>report</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+     </profiles>
   </build>
-	
-<profiles>
-  <profile>
-        <id>coverage</id>
-        <activation>
-            <activeByDefault>true</activeByDefault>
-        </activation>
-        <build>
-            <plugins>
-                <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.5</version>
-                <executions>
-                <execution>
-                    <id>prepare-agent</id>
-                    <goals>
-                    <goal>prepare-agent</goal>
-                    </goals>
-                </execution>
-                <execution>
-                    <id>report</id>
-                    <goals>
-                    <goal>report</goal>
-                    </goals>
-                </execution>
-                </executions>
-                </plugin>
-            </plugins>
-        </build>
-    </profile>
-  </profiles>
-	
+		
 </project>
