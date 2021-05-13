@@ -28,20 +28,22 @@
     <finalName>${project.artifactId}</finalName>
     <plugins>
         <plugin>
-            <groupId>org.jacoco</groupId>
-            <artifactId>jacoco-maven-plugin</artifactId>
-            <version>0.8.3</version>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>prepare-agent</goal>
-                    </goals>
-                </execution>
-            </executions>
-            <configuration>
-                <destFile>${sonar.jacoco.reportPath}</destFile>
-            </configuration>
-        </plugin>
+		<groupId>org.jacoco</groupId>
+		<artifactId>jacoco-maven-plugin</artifactId>
+		<version>0.8.3</version>
+		<configuration>
+		    <destFile>${sonar.jacoco.reportPath}</destFile>
+		    <append>true</append>
+		</configuration>
+		<executions>
+		    <execution>
+			<id>agent</id>
+			<goals>
+			    <goal>prepare-agent</goal>
+			</goals>
+		    </execution>
+		</executions>
+	    </plugin>
     </plugins>
   </build>
 </project>
