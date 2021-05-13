@@ -35,5 +35,9 @@ pipeline
                                                     }
                                         }
                             }
+                    stage ("Code Coverage")
+                            {
+                               jacoco()
+                            }
                 }
         }
