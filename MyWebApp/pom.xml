@@ -32,25 +32,18 @@
 		<artifactId>jacoco-maven-plugin</artifactId>
 		<version>${jacoco.version}</version>
 		<configuration>
-		   <skip>${maven.test.skip}</skip>
-		   <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
-		   <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
-		   <output>file</output>
-		   <append>true</append>
-		   <excludes>
-		     <exclude>*MethodAccess</exclude>
-		   </excludes>
+		   <dataFiles>${{project.build.directory}/coverage-reports/jacoco.exec</dataFiles>
+		   <outputDirectory>target/jacoco-report</outputDirectory>
 		</configuration>
 		<executions>
 		   <execution>
-		     <id>jacoco-initalize</id>
 			 <goals>
 			    <goal>prepare-agent</goal>
 			 </goals>
 		   </execution>
 		   <execution>
-		     <id>jacoco-site</id>
-			 <phase>verify</phase>
+		     <id>jacoco-report</id>
+			 <phase>test</phase>
 			 <goals>
 			   <goal>report</goal>
 			 </goals>
